@@ -1,0 +1,47 @@
+.bg-container {
+    height: 100vh;
+    background: tomato;
+    background: url("../images/bg/main.jpg");
+    background-size: cover;
+}
+
+.intro {
+    height: 300px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 2px 2px black;
+    letter-spacing: 3px;
+}
+
+.trending {
+    height: auto;
+    padding-bottom: 20px;
+    background: url("../images/bg/spiderman.jpg");
+    background-size: cover
+}
+
+.superhero {
+    height: auto;
+    padding-bottom: 20px;
+    background: url("../images/bg/car.jpg");
+    background-size: cover
+}
+
+.search {
+    height: auto;
+    padding-bottom: 20px;
+    background: url("../images/bg/romance.jpg");
+    background-size: cover
+}
+
+.imgMovie {
+    width: 100%;
+    height: 400px;
+}
