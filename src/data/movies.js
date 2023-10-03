@@ -24,6 +24,17 @@ class Movies {
             console.log(error);
         }
     }
+
+    static async search(title) {
+        const res = await fetch(`${BASE_URL}/search/movie?query=${title.value}&language=en-US&api_key=${API_KEY}&page=1`);
+
+        try {
+            const json = await res.json();
+            View.searchView(json, title);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 
 export default Movies;
