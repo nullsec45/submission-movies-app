@@ -11,8 +11,8 @@ class TitleElement extends HTMLElement {
 
     render() {
         this.shadowDOM.innerHTML = `
-                <div>TONTON FILM</div>
-                <div>DIMANA AJA, KAPAN AJA</div>
+                <div>WATCH A MOVIE</div>
+                <div>ANYWHERE, ANYTIME</div>
         `;
         // this.shadowDOM.classList.add("");
     }
