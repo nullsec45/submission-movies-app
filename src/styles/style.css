@@ -1,8 +1,26 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .bg-container {
     height: 100vh;
     background: tomato;
     background: url("../images/bg/main.jpg");
     background-size: cover;
+}
+
+.nav-item a {
+    color: white;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: rgba(117, 238, 249, 0.867);
+}
+
+#navbarNav .nav-item a.active {
+    font-weight: bold;
+    color: rgba(117, 238, 249, 0.867);
 }
 
 .intro {
@@ -27,7 +45,7 @@
     background-size: cover
 }
 
-.superhero {
+.popular {
     height: auto;
     padding-bottom: 20px;
     background: url("../images/bg/car.jpg");
