@@ -17,9 +17,6 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader'
-                    },
-                    {
-                        loader: 'style-loader'
                     }
                 ]
             }
