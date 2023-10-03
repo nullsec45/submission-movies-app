@@ -11,7 +11,7 @@ class ButtonElement extends HTMLElement {
 
     render() {
         this.shadowDOM.innerHTML = `
-                 <button></button>
+                 <a href="#search"></a>
         `;
         // this.shadowDOM.classList.add("");
     }
