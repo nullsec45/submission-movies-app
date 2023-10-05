@@ -6,7 +6,8 @@ class App {
         Movies.trending();
         Movies.popular();
         Event.searchEvent();
-        Event.navbarActive();
+        Event.navbarActiveEvent();
+        Event.movieDetailEvent();
     }
 }
 
