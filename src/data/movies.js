@@ -35,6 +35,17 @@ class Movies {
             console.log(error);
         }
     }
+
+    static async movieDetail(id) {
+        const res = await fetch(`${BASE_URL}/movie/${id}?language=en-US&api_key=${API_KEY}`);
+
+        try {
+            const json = await res.json();
+            View.movieDetailView(json);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 
 export default Movies;
