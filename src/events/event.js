@@ -10,7 +10,7 @@ class Event {
         });
     }
 
-    static navbarActive() {
+    static navbarActiveEvent() {
         const navbar_nav = document.querySelectorAll("#navbarNav .navbar-nav li.nav-item");
 
         navbar_nav.forEach(item => {
@@ -20,6 +20,18 @@ class Event {
                 this.firstElementChild.className += " active";
             })
         })
+    }
+
+    static movieDetailEvent() {
+        const body = document.querySelector("body");
+
+        body.addEventListener("click", function (event) {
+            if (event.target.matches("#buttonDetail")) {
+                const movieID = event.target.dataset.id;
+                Movies.movieDetail(movieID);
+            }
+        })
+
     }
 }
 
