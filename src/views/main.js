@@ -17,7 +17,7 @@ class View {
                             <p class="card-text">${maxBody(movie.overview, MAX_BODY_LENGTH)}</p>
                         </div>
                         <div class="card-footer text=center">
-                            <a href="#" class="btn btn-primary text-center d-flex justify-content-center">Show More</a>
+                            <a href="#" id="buttonDetail" role="button" class="btn btn-primary text-center d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#modalMovie" data-id="${movie.id}">Show More</a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,8 @@ class View {
                             <p class="card-text">${maxBody(popular.overview, MAX_BODY_LENGTH)}</p>
                         </div>
                         <div class="card-footer text=center">
-                            <a href="#" class="btn btn-primary text-center d-flex justify-content-center">Show More</a>
+                            <a href="#" id="buttonDetail" role="button" class="btn btn-primary text-center d-flex justify-content-center" data-bs-toggle="modal"  data-bs-target="#modalMovie" data-id="${popular.id}">Show More</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -67,12 +68,47 @@ class View {
                             <p class="card-text">${maxBody(movie.overview, MAX_BODY_LENGTH)}</p>
                         </div>
                         <div class="card-footer text=center">
-                            <a href="#" class="btn btn-primary text-center d-flex justify-content-center">Show More</a>
+                            <a href="#" id="buttonDetail" role="button" class="btn btn-primary text-center d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#modalMovie" data-id="${movie.id}">Show More</a>
                         </div>
                     </div>
                 </div>
             `);
+
+
         })
+
+    }
+
+    static movieDetailView(data) {
+        const modalContent = document.getElementById("modalContent");
+
+        modalContent.innerHTML = "";
+
+        modalContent.insertAdjacentHTML("beforeend", `
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMovieLabel">${data.title}</h5>
+                </div>
+                <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="${IMAGE_URL}/${data.poster_path}" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="list-group">
+                                    <li class="list-group-item">Released:${data.release_date}</li>
+                                    <li class="list-group-item">Overview:${data.overview}</li>
+                                    <li class="list-group-item">Popularity:${data.popularity}</li>
+                                    <li class="list-group-item">Status:${data.status}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>         
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+        `);
     }
 }
 
